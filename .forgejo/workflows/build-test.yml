@@ -23,7 +23,7 @@ jobs:
       - name: List the files we've made
         run: |
           ls -la .
-          file wdmch-tools
+          if [ ! $(which file) == "" ]; then file wdmch-tools; fi
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v3

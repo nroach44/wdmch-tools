@@ -20,6 +20,7 @@ jobs:
 
       - name: List the files we've made
         run: |
+          ls -la .
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v3

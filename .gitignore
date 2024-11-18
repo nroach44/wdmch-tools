@@ -2,3 +2,5 @@
 tmp/
 # Ignore release binaries
 cmd/fwtablectl/fwtablectl*
+wdmch-tools
+wdmch-tools.exe

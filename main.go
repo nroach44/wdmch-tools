@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/sgissi/wdmch-tools/pkg/fwtable"
+	"github.com/nroach44/wdmch-tools/pkg/fwtable"
 )
 
 func usage() {
-	fmt.Println("Usage: fwtablectl command")
+	fmt.Println("Usage: wdmch-tools command")
 	fmt.Println("Commands:")
 	fmt.Println("  show [fwtable-file] - Read from file and show existing entries")
 	fmt.Println("  firmware new    [fwtable-file] [type] [file] [sector] [load-address] - Add new firmware")
@@ -18,11 +18,11 @@ func usage() {
 	fmt.Println("  part remove [fwtable-file] [index] - Remove part by index")
 	fmt.Println("---")
 	fmt.Println("Examples:")
-	fmt.Println("  fwtablectl show /dev/sataa1")
-	fmt.Println("  fwtablectl firmware update fwtable.bin KernelRootFS rootfs.cpio.gz")
-	fmt.Println("  fwtablectl firmware new /dev/sataa1 KernelRootFS rootfs.cpio.gz 67584 0x02200000")
-	fmt.Println("  fwtablectl firmware remove /root/fwtable.bin uBoot")
-	fmt.Println("  fwtablectl part remove /dev/sda1 1")
+	fmt.Println("  wdmch-tools show /dev/sataa1")
+	fmt.Println("  wdmch-tools firmware update fwtable.bin KernelRootFS rootfs.cpio.gz")
+	fmt.Println("  wdmch-tools firmware new /dev/sataa1 KernelRootFS rootfs.cpio.gz 67584 0x02200000")
+	fmt.Println("  wdmch-tools firmware remove /root/fwtable.bin uBoot")
+	fmt.Println("  wdmch-tools part remove /dev/sda1 1")
 	os.Exit(1)
 }
 

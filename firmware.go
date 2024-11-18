@@ -6,7 +6,7 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/sgissi/wdmch-tools/pkg/fwtable"
+	"github.com/nroach44/wdmch-tools/pkg/fwtable"
 )
 
 func firmware(args []string) {

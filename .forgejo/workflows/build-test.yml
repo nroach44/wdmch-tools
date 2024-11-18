@@ -1,0 +1,29 @@
+on:
+  push:
+
+jobs:
+  go-build:
+    runs-on: docker
+    container:
+      image: git.int.nroach44.au/nroach44/fjrunner-go
+    strategy:
+      matrix:
+        target: ["arm64", "amd64"]
+
+    steps:
+      - name: Checkout this repo
+        uses: actions/checkout@v3
+
+      - name: Build?
+        run: |
+          GOOS=linux GOARCH=${{ target }} go build -v github.com/nroach44/wdmch-tools
+
+      - name: List the files we've made
+        run: |
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v3
+        id: artifact-upload-step
+        with:
+          name: wdmchtools-${{ matrix.target }}
+          path: wdmch-tools

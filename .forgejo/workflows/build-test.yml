@@ -23,6 +23,7 @@ jobs:
       - name: List the files we've made
         run: |
           ls -la .
+          file wdmch-tools
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v3

@@ -16,7 +16,7 @@ jobs:
 
       - name: Build?
         run: |
-          export GOOS=linux GOARCH=${{ target }}
+          export GOOS=linux GOARCH=${{ matrix.target }}
           echo OS: $GOOS Arch: $GOARCH
           go build -v github.com/nroach44/wdmch-tools
 
